@@ -1,0 +1,16 @@
+.navbar{
+    height: 5vh;
+    margin:  3vh 4vw;
+}
+
+.links__list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    &Item{
+        display: inline-block;
+        color: #A2A2A2;
+        padding-right: 3vw;
+    }
+}
