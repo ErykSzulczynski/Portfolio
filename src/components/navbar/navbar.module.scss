@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .navbar{
     height: 5vh;
     margin:  3vh 4vw;
@@ -10,7 +12,7 @@
 
     &Item{
         display: inline-block;
-        color: #A2A2A2;
+        color: $dimmed-color;
         padding-right: 3vw;
     }
 }

@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .hero{
     position: relative;
     height: 49vh;
@@ -10,7 +12,7 @@
     }
 
     &__textHighlighted{
-        color: #218C74;
+        color: $base-color;
     }
 }
 
