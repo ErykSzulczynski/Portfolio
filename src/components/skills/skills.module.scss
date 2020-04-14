@@ -1,5 +1,29 @@
 @import '../../styles/variables.scss';
 
 .skills{
-    margin-top: $section-margin;
+    
+    width: 70vw;
+    margin: 0 auto;
+
+    &__title{
+        margin-top: $section-margin;
+        margin-bottom: 5vh;
+        text-align: center;
+    }
+
+    &__grid{
+        display: grid;
+        width: 100%;
+        height: 40vh;
+        grid-template-columns: auto auto auto;
+    }
+
+    &__gridItem:nth-child(2){
+        border-left: 2px solid grey;
+        border-right: 2px solid grey;
+    }
+
+    &__gridItemTitle{
+        text-align: center;
+    }
 }
