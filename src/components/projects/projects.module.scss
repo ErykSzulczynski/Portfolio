@@ -3,3 +3,36 @@
 .projects{
     margin-top: $section-margin;
 }
+
+.projectItem{
+    width: 35vw;
+    min-height: 40vh;
+    border: 2px solid $base-color;
+    margin: 0 auto;
+}
+
+.projectPhoto{
+    width: 100%;
+
+    img{
+        width: 100%;
+    }
+}
+
+.projectContent{
+    width: calc(100% - 40px);
+    text-align: justify;
+    padding: 0 20px;
+}
+
+.projectMore{
+    width: 10vw;
+        padding: 1.5vh 0;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        color: white;
+        background: $base-color;
+        display: block;
+        margin: 0 auto; 
+}
