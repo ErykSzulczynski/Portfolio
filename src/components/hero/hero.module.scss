@@ -1,15 +1,32 @@
 @import '../../styles/variables.scss';
 @import '../../styles/breakpoints.scss';
 
+@mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
+ 
+@mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+
 .hero{
     position: relative;
     height: 49vh;
 
     &__text{
-        font-size: 60px;
+        height: 100%;
+        font-size: 40px;
         text-align: right;
         margin-top: 40vh;
         margin-right: 5vw;
+
+        @include xl{
+            font-size: 60px;
+        }
     }
 
     &__textHighlighted{

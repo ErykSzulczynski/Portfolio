@@ -1,17 +1,38 @@
 @import '../../styles/variables.scss';
 @import '../../styles/breakpoints.scss';
 
+@mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
+ 
+@mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+
 .about{
-    width: 25vw;
+    width: 80vw;
     margin: 0 auto;
     margin-top: $section-margin;
 
+    @include xl{
+        width: 25vw;
+    }
+
     &__photo{
-        width: 4vw;
-        height: 4vw;
+        width: 20vw;
+        height: 20vw;
         border: 2px solid $base-color;
         border-radius: 50%;
         margin: 0 auto;
+
+        @include xl{
+            width: 4vw;
+            height: 4vw;
+        }
     }
 
     &__title{
@@ -19,7 +40,7 @@
     }
 
     &__more{
-        width: 10vw;
+        width: 60vw;
         padding: 1.5vh 0;
         border-radius: 10px;
         border: none;
@@ -28,5 +49,9 @@
         background: $base-color;
         display: block;
         margin: 0 auto;
+
+        @include xl{
+            width: 10vw;
+        }
     }
 }

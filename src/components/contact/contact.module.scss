@@ -1,8 +1,24 @@
 @import '../../styles/variables.scss';
 @import '../../styles/breakpoints.scss';
 
+@mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
+ 
+@mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+
 .contact{
     margin: 0 auto;
     margin-top: $section-margin;
-    width: 30vw;
+    width: 80vw;
+
+    @include xl{
+        width: 30vw;
+    }
 }

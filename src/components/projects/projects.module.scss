@@ -1,15 +1,31 @@
 @import '../../styles/variables.scss';
 @import '../../styles/breakpoints.scss';
 
+@mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
+ 
+@mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+
 .projects{
     margin-top: $section-margin;
 }
 
 .projectItem{
-    width: 35vw;
+    width: 80vw;
     min-height: 40vh;
     border: 2px solid $base-color;
     margin: 0 auto;
+
+    @include xl{
+        width: 35vw;
+    }
 }
 
 .projectPhoto{
@@ -27,7 +43,7 @@
 }
 
 .projectMore{
-    width: 10vw;
+    width: 60vw;
         padding: 1.5vh 0;
         border-radius: 10px;
         border: none;
@@ -36,4 +52,9 @@
         background: $base-color;
         display: block;
         margin: 0 auto; 
+        margin-bottom: 1rem;
+    
+    @include xl{
+        width: 10vw;
+    }
 }
