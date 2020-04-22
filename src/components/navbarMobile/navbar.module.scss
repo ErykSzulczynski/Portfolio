@@ -1,3 +1,16 @@
+@import '../../styles/variables.scss';
+
+.links__list{
+    list-style-type: none;
+}
+
+.links__listItem{
+    position: relative;
+    font-size: 30px;
+    color: $dimmed-color;
+    z-index: 110;
+}
+
 .overlayHidden{
     position: absolute;
     top: 0;

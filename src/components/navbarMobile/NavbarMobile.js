@@ -1,21 +1,35 @@
 import React from 'react'
 import styles from './navbar.module.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
-export default function NavbarMobile() {
-
-    let isOpen = false
-
-    function toggleMenu(){
-        isOpen = !isOpen
-        console.log("Menu opened")
+class NavbarMobile extends React.Component{
+    constructor(props){
+        super(props)
+        this.state = {
+            isOpen: false
+        }
+        this.toggleMenu = this.toggleMenu.bind(this)
     }
 
-    return (
-        <div className={styles.navbar}>
-           <ul className={styles.links__list}>
-               <li className={styles.links__listItem} onClick={() => {toggleMenu()}}>Mobile</li>
-           </ul>
-           <div className={isOpen ? styles.overlayOpened : styles.overlayHidden}></div>
-        </div>
-    )
+    toggleMenu(){
+        this.setState((prevState) => ({
+            isOpen: !prevState.isOpen
+        }))
+        console.log("Mobile menu opened")
+        console.log("State: " + this.state.isOpen)
+    }
+
+    render(){
+        return (
+            <div className={styles.navbar}>
+               <ul className={styles.links__list}>
+                   <li className={styles.links__listItem} onClick={this.toggleMenu}>{this.state.isOpen ? <FontAwesomeIcon icon={faTimes} /> : <FontAwesomeIcon icon={faBars} />}</li>
+               </ul>
+               <div className={this.state.isOpen ? styles.overlayOpened : styles.overlayHidden}></div>
+            </div>
+        )
+    }  
 }
+
+export default NavbarMobile
