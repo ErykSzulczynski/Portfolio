@@ -26,7 +26,14 @@ class NavbarMobile extends React.Component{
                <ul className={styles.links__list}>
                    <li className={styles.links__listItem} onClick={this.toggleMenu}>{this.state.isOpen ? <FontAwesomeIcon icon={faTimes} /> : <FontAwesomeIcon icon={faBars} />}</li>
                </ul>
-               <div className={this.state.isOpen ? styles.overlayOpened : styles.overlayHidden}></div>
+               <div className={this.state.isOpen ? styles.overlayOpened : styles.overlayHidden}>
+                   <ul className={styles.overlay__menu}>
+                       <li className={styles.overlay__menuItem}>About</li>
+                       <li className={styles.overlay__menuItem}>Skills</li>
+                       <li className={styles.overlay__menuItem}>Portfolio</li>
+                       <li className={styles.overlay__menuItem}>Contact</li>
+                   </ul>
+               </div>
             </div>
         )
     }  

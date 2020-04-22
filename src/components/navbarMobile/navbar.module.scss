@@ -30,3 +30,16 @@
     z-index: 100;
     background: rgba(0, 0, 0, 0.8);
 }
+
+.overlay__menu{
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin-top: 10vh;
+
+    &Item{
+        padding-top: 3rem;
+        font-size: 25px;
+    }
+}
