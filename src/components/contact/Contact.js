@@ -10,7 +10,6 @@ export default function Contact() {
             <br/><br/>
             ✉️ Email: eryk.szulczynski0@gmail.com<br/>
             LinkedIn<br/>
-
             </p>
         </div>
     )

@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../components/navbar/Navbar'
+import NavbarMobile from '../components/navbarMobile/NavbarMobile'
 import Hero from '../components/hero/Hero'
 import About from '../components/about/About'
 import Skills from '../components/skills/Skills'
@@ -22,7 +23,7 @@ export default function index() {
 
     return (
         <div>
-            <Navbar/>
+            {isMobile() ? <NavbarMobile/> : <Navbar/>}
             <Hero/>
             <About/>
             <Skills/>
