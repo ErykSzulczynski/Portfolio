@@ -13,8 +13,22 @@
     }
 }
 
+.title{
+    font-size: 25px;
+    text-align: center;
+    font-weight: bolder;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-bottom: 5vh;
+}
+
 .projects{
+    width: 70vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
     margin-top: $section-margin;
+    grid-column-gap: 20px;
 }
 
 .projectItem{
@@ -24,12 +38,14 @@
     margin: 0 auto;
 
     @include xl{
-        width: 35vw;
+        width: 20vw;
     }
 }
 
 .projectPhoto{
     width: 100%;
+    font-size: 60px;
+    text-align: center;
 
     img{
         width: 100%;
