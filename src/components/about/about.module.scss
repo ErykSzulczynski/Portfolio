@@ -40,6 +40,7 @@
 
     &__title{
         text-align: center;
+        font-size: 16px;
     }
 
     &__more{
@@ -52,6 +53,8 @@
         background: $base-color;
         display: block;
         margin: 0 auto;
+        font-size: 16px;
+        font-weight: lighter;
 
         @include xl{
             width: 10vw;

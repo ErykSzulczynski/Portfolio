@@ -25,9 +25,13 @@ export default function index() {
         <div>
             {isMobile() ? <NavbarMobile/> : <Navbar/>}
             <Hero/>
+            <div id="about"></div>
             <About/>
+            <div id="skills"></div>
             <Skills/>
+            <div id="projects"></div>
             <Projects/>
+            <div id="contact"></div>
             <Contact/>
             <Footer/>
         </div>

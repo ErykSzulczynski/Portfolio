@@ -7,10 +7,10 @@ export default function Navbar() {
     <div className={styles.navbar}>
       <img src={logo} className={styles.logo} alt="logo" />
       <ul className={styles.links__list}>
-        <li className={styles.links__listItem}>About</li>
-        <li className={styles.links__listItem}>Skills</li>
-        <li className={styles.links__listItem}>Portfolio</li>
-        <li className={styles.links__listItem}>Contact</li>
+        <li className={styles.links__listItem}><a href="#about">About</a></li>
+        <li className={styles.links__listItem}><a href="#skills">Skills</a></li>
+        <li className={styles.links__listItem}><a href="#projects">Projects</a></li>
+        <li className={styles.links__listItem}><a href="#contact">Contact</a></li>
       </ul>
     </div>
   )
