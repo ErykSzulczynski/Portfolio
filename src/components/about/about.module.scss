@@ -25,13 +25,16 @@
     &__photo{
         width: 20vw;
         height: 20vw;
-        border: 2px solid $base-color;
+        border: 3px solid $base-color;
         border-radius: 50%;
         margin: 0 auto;
+        background-image: url('./photo.png');
+        background-size: cover;
+        background-position: center;
 
         @include xl{
-            width: 4vw;
-            height: 4vw;
+            width: 5vw;
+            height: 5vw;
         }
     }
 

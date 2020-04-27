@@ -4,7 +4,8 @@ import styles from "./about.module.scss"
 export default function About() {
   return (
     <div className={styles.about}>
-      <div className={styles.about__photo}></div>
+      <div className={styles.about__photo}>
+      </div>
       <p className={styles.about__title}>Hello world👋</p>
       <p className={styles.about__content}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget
