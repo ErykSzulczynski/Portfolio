@@ -18,27 +18,44 @@
     text-align: center;
     font-weight: bolder;
     grid-column-start: 1;
-    grid-column-end: 4;
-    margin-bottom: 5vh;
+    grid-column-end: 2;
+    margin-top: $section-margin;
+    
+    p{
+        margin-bottom: 0;
+    }
+
+    @include xl{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-bottom: 5vh;
+    }
 }
 
 .projects{
     width: 70vw;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto;
     margin-top: $section-margin;
     grid-column-gap: 20px;
-}
-
-.projectItem{
-    width: 80vw;
-    min-height: 40vh;
-    border: 2px solid $base-color;
     margin: 0 auto;
 
     @include xl{
+        grid-template-columns: auto auto auto;
+    }
+}
+
+.projectItem{
+    width: 100%;
+    min-height: 40vh;
+    border: 2px solid $base-color;
+    margin: 0 auto;
+    margin-top: 10vh;
+
+    @include xl{
         width: 20vw;
+        margin-top: 0;
     }
 }
 
