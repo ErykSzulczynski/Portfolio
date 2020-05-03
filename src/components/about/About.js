@@ -1,7 +1,10 @@
 import React from "react"
 import styles from "./about.module.scss"
+import AboutDetails from '../aboutDetails/AboutDetails'
 
 export default function About() {
+  const [modalShow, setModalShow] = React.useState(false);
+
   return (
     <div className={styles.about}>
       <div className={styles.about__photo}>
@@ -20,7 +23,11 @@ export default function About() {
         tincidunt gravida vitae id dolor. Phasellus quis libero ligula. Cras sit
         amet nulla metus. Aenean congue erat vel euismod fermentum.
       </p>
-      <button className={styles.about__more}>More</button>
+      <button className={styles.about__more} onClick={() => setModalShow(true)}>More</button>
+      <AboutDetails
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+        />
     </div>
   )
 }
