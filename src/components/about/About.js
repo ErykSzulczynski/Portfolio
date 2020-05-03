@@ -27,6 +27,7 @@ export default function About() {
       <AboutDetails
           show={modalShow}
           onHide={() => setModalShow(false)}
+          dialogClassName="modal-90w"
         />
     </div>
   )
