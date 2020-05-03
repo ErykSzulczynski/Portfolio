@@ -1,10 +1,12 @@
 import React from 'react'
 import styles from './projects.module.scss'
-import bg from './bg.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarAlt, faGraduationCap, faUserCircle } from '@fortawesome/free-solid-svg-icons'
+import ProjectDetails from '../projectsDetails/ProjectDetails'
 
 export default function Projects() {
+    const [modalShow, setModalShow] = React.useState(false);
+
     return (
         <div>   
         <div className={styles.projects}>
@@ -29,7 +31,7 @@ export default function Projects() {
                         Cras eros enim, condimentum non nulla nec,
                         ullamcorper dictum ante.
                    </p>
-                    <button className={styles.projectMore}>
+                    <button className={styles.projectMore} onClick={() => setModalShow(true)}>
                         More
                    </button>
                 </div>
@@ -81,6 +83,10 @@ export default function Projects() {
                 </div>
             </div>
         </div>
+        <ProjectDetails
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+        />
         </div>
     )
 }

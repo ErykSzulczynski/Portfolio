@@ -1,0 +1,18 @@
+@import '../../styles/variables.scss';
+@import '../../styles/breakpoints.scss';
+
+.modal__header{
+    border-bottom: 1px solid grey !important;
+}
+
+.modal__title{
+    color: $base-color;
+}
+
+.modal__button{
+    background: $base-color !important;
+}
+
+.modal__footer{
+    border-top: 1px solid grey !important;
+}

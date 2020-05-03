@@ -1,6 +1,7 @@
 import React from 'react'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
+import styles from './aboutDetails.module.scss'
 
 export default function AboutDetails(props) {
     return (
@@ -9,9 +10,10 @@ export default function AboutDetails(props) {
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
+        className={styles.test}
       >
-        <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
+        <Modal.Header className={styles.modal__header}>
+          <Modal.Title id="contained-modal-title-vcenter" className={styles.modal__title}>
             Modal heading
           </Modal.Title>
         </Modal.Header>
@@ -23,8 +25,8 @@ export default function AboutDetails(props) {
             consectetur ac, vestibulum at eros.
           </p>
         </Modal.Body>
-        <Modal.Footer>
-          <Button onClick={props.onHide}>Close</Button>
+        <Modal.Footer className={styles.modal__footer}>
+          <Button onClick={props.onHide} className={styles.modal__button}>Close</Button>
         </Modal.Footer>
       </Modal>
     );
