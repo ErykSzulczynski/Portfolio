@@ -7,7 +7,7 @@
 .links__listItem{
     position: relative;
     font-size: 30px;
-    color: $dimmed-color;
+    color: white;
     z-index: 110;
 }
 
@@ -41,5 +41,6 @@
     &Item{
         padding-top: 3rem;
         font-size: 25px;
+        color: $dimmed-color;
     }
 }
