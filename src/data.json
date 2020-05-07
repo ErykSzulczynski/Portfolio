@@ -1,0 +1,21 @@
+{
+    "about": "My name is Eryk Szułczyński and i’m a junior front-end web developer. I started my journey with programming 3 years ago on my web-development class in technical college. At first glance this whole HTML / CSS thing was not that interesting, but as i started to look more into it I gained more and more interest in this topic. I’ve been learning to this day (with some breaks). 2019 was groundbreaking for me because that was the year when i got realy hooked up with web development. I started to learn more “advanced” topics like SASS and React.js. That was the moment when i felt like whole world opened for me and how powerful web applications can be. Now, after i finishied my technical college it is my dream to make it my job as developing web apps is something, that i love doing.",
+    "about-more": {
+        "other-passions": "Since i was 7 years old i was playing computer games. I’ve got introduced to them by my parents (yes, my parents are gamers). I’ve all played this game called “Lineage II” wich was a popular MMORPG at the time. As i grew up i gained more interest in survival games and simulation games, especialy military simulators. Those games like “Arma 3”, “Project Reality”, “DayZ” and “Escape From Tarkov” gave me lots of funny memories and also gave a oportunity to meet many people from different sides of the world.",
+        "music": "For the most part of my life i was into electronic music like trap and dubstep. But since 2016 i’ve got hooked on metal. It started innocent, from bands like nickelback or bring me the horizon, but then i gained more and more affection for heavier kinds of music like metalcore, deathcore and death metal. Since then metal and it’s sub-genres are my favourite kind of music but i also tend to listen to different kinds of music depending on my mood. From lo-fi hip hop to rap and nordic folk music.",
+        "future": "In the future i plan to branch out in different programming languages to explore more and more in what i can do with code. Right know i am looking for a job, that could help me to gain experience and confidence in my skills."
+    },
+    "projects":[
+        {
+            "name": "Uniwersytet Trzeciego Wieku",
+            "technologies": [
+                "HTML",
+                "CSS",
+                "PHP",
+                "Wordpress"
+            ],
+            "link": "https://utwnt.pl/",
+            "description": ""
+        }
+    ]
+}

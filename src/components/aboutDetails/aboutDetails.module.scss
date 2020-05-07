@@ -16,3 +16,19 @@
 .modal__footer{
     border-top: 1px solid grey !important;
 }
+
+.more__item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.more__content{
+    width: 50%;
+}
+
+.more__itemIcon{
+    width: 50%;
+    text-align: center;
+    font-size: 8vh;
+}
