@@ -45,7 +45,7 @@
         grid-template-columns: auto;
 
         @include xl{
-            grid-template-columns: auto auto auto;
+            grid-template-columns: 33.3% 33.3% 33.3%;
         }
     }
 
@@ -64,5 +64,15 @@
 
     &__gridItemTitle{
         text-align: center;
+    }
+
+    &__gridItemText{
+        text-align: left;
+        font-weight: bolder;
+        padding-left: 15px;
+    }
+
+    &__gridItemTextSection{
+        font-weight: normal;
     }
 }

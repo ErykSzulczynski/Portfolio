@@ -11,7 +11,7 @@ export default function Projects() {
         <div>   
         <div className={styles.projects}>
             <div className={styles.title}>
-                <p>Projects</p>
+                <p>Projects ☄️</p>
             </div>
             <div className={styles.projectItem}>
                 <div className={styles.projectPhoto}>
