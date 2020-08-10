@@ -6,10 +6,9 @@ export default function Contact() {
         <div className={styles.contact}>
             <p className={styles.contact__title}>Contact me ✉️</p>
             <p className={styles.contact__content}>
-            If you want to contact with me you are more than welcome to do so by using LinkedIn messages or email
+            If you want to contact with me you are more than welcome to do so by using email
             <br/><br/>
-            ✉️ Email: eryk.szulczynski0@gmail.com<br/>
-            LinkedIn<br/>
+            ✉️ Email: eryk.szulczynski0@gmail.com
             </p>
         </div>
     )

@@ -21,6 +21,11 @@
             color: $dimmed-color;
             padding-right: 3vw;
             text-decoration: none;
+            transition-duration: .3s;
+
+            &:hover{
+                color: $base-color;
+            }
         }
     }
 }
