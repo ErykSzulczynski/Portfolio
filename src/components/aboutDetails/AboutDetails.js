@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button"
 import styles from "./aboutDetails.module.scss"
 import data from "../../data.json"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGamepad, faMusic, faUserClock } from "@fortawesome/free-solid-svg-icons"
+import { faGamepad, faMusic, faUserClock, faInfoCircle } from "@fortawesome/free-solid-svg-icons"
 
 export default function AboutDetails(props) {
   return (
@@ -24,31 +24,29 @@ export default function AboutDetails(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
+        <div className={styles.item__first}></div>
         <div className={styles.more__item}>
           <div className={styles.more__content}>
-            <h4>My other passion</h4>
+            <h4><span className={styles.more__icon}><FontAwesomeIcon icon={faInfoCircle}/></span>About this section</h4>
+            <p>{data["about-more"]["about-section"]}</p>
+          </div>
+        </div>
+        <div className={styles.more__item}>
+          <div className={styles.more__content}>
+            <h4><span className={styles.more__icon}><FontAwesomeIcon icon={faGamepad}/></span>My other passion</h4>
             <p>{data["about-more"]["other-passions"]}</p>
           </div>
-          <div className={styles.more__itemIcon}>
-            <FontAwesomeIcon icon={faGamepad}/>
-          </div>
         </div>
         <div  className={styles.more__item}>
           <div className={styles.more__content}>
-            <h4>What kind of music do I listen?</h4>
+            <h4><span className={styles.more__icon}><FontAwesomeIcon icon={faMusic}/></span>What kind of music do I listen?</h4>
             <p>{data["about-more"]["music"]}</p>
           </div>
-          <div className={styles.more__itemIcon}>
-            <FontAwesomeIcon icon={faMusic}/>
-          </div>
         </div>
         <div  className={styles.more__item}>
           <div className={styles.more__content}>
-            <h4>Plans for the future</h4>
+            <h4><span className={styles.more__icon}><FontAwesomeIcon icon={faUserClock}/></span>Plans for the future</h4>
             <p>{data["about-more"]["future"]}</p>
-          </div>
-          <div className={styles.more__itemIcon}>
-            <FontAwesomeIcon icon={faUserClock}/>
           </div>
         </div>
       </Modal.Body>

@@ -20,9 +20,22 @@
     color: white;
 
     &__title{
-        margin-top: $section-margin;
-        margin-bottom: 5vh;
+        font-size: 25px;
         text-align: center;
+        font-weight: bolder;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        margin-top: $section-margin;
+        
+        p{
+            margin-bottom: 0;
+        }
+    
+        @include xl{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            margin-bottom: 5vh;
+        }
     }
 
     &__grid{
