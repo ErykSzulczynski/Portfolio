@@ -32,6 +32,11 @@
     }
 }
 
+.projectTitle{
+    padding: 10px 20px;
+    padding-bottom: 0;
+}
+
 .projects{
     width: 70vw;
     margin: 0 auto;
@@ -91,5 +96,19 @@
     
     @include xl{
         width: 10vw;
+    }
+}
+
+.technologies__list{
+    list-style-type: none;
+    padding: 0 20px;
+    
+    li{
+        display: inline-block;
+        padding: 5px 10px;
+        margin-right: 15px;
+        margin-top: 10px;
+        border: 2px solid $base-color;
+        border-radius: 5px;
     }
 }

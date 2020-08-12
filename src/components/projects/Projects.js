@@ -14,8 +14,24 @@ export default function Projects() {
                 <p>Projects ☄️</p>
             </div>
             <div className={styles.projectItem}>
-                <div className={styles.projectPhoto}>
-                    <FontAwesomeIcon icon={faCalendarAlt}/>
+            <div className={styles.projectTitle}>
+                    <h2>Title</h2>
+                </div>
+                <div className={styles.projectStack}>
+                    <ul className={styles.technologies__list}>
+                        <li>
+                            React
+                        </li>
+                        <li>
+                            SASS
+                        </li>
+                        <li>
+                            Express
+                        </li>
+                        <li>
+                            MongoDB
+                        </li>
+                    </ul>
                 </div>
                 <div className={styles.projectContent}>
                     <p>
@@ -37,8 +53,24 @@ export default function Projects() {
                 </div>
             </div>
             <div className={styles.projectItem}>
-                <div className={styles.projectPhoto}>
-                    <FontAwesomeIcon icon={faUserCircle}/>
+                <div className={styles.projectTitle}>
+                    <h2>Title</h2>
+                </div>
+                <div className={styles.projectStack}>
+                    <ul className={styles.technologies__list}>
+                        <li>
+                            React
+                        </li>
+                        <li>
+                            SASS
+                        </li>
+                        <li>
+                            Express
+                        </li>
+                        <li>
+                            MongoDB
+                        </li>
+                    </ul>
                 </div>
                 <div className={styles.projectContent}>
                     <p>
@@ -60,8 +92,24 @@ export default function Projects() {
                 </div>
             </div>
             <div className={styles.projectItem}>
-                <div className={styles.projectPhoto}>
-                    <FontAwesomeIcon icon={faGraduationCap}/>
+            <div className={styles.projectTitle}>
+                    <h2>Title</h2>
+                </div>
+                <div className={styles.projectStack}>
+                    <ul className={styles.technologies__list}>
+                        <li>
+                            React
+                        </li>
+                        <li>
+                            SASS
+                        </li>
+                        <li>
+                            Express
+                        </li>
+                        <li>
+                            MongoDB
+                        </li>
+                    </ul>
                 </div>
                 <div className={styles.projectContent}>
                     <p>
