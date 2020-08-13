@@ -1,140 +1,57 @@
 import React from 'react'
 import styles from './projects.module.scss'
+import data from "../../data.json"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarAlt, faGraduationCap, faUserCircle } from '@fortawesome/free-solid-svg-icons'
 import ProjectDetails from '../projectsDetails/ProjectDetails'
 
 export default function Projects() {
     const [modalShow, setModalShow] = React.useState(false);
+    const [targetTitle, setTargetTitle] = React.useState();
+    const [targetTechnologies, setTargetTechnologies] = React.useState();
+    const [targetDescription, setTargetDescription] = React.useState();
+    const [targetLink, setTargetLink] = React.useState();
+
+    const projects = data["projects"].map((project) => {
+        return(<div className={styles.projectItem}>
+            <div className={styles.projectTitle}>
+                <h2>{project.title}</h2>
+                </div>
+                <div className={styles.projectStack}>
+                    <ul className={styles.technologies__list}>
+                        {project.technologies.map((technology) => {
+                            return(<li>{technology}</li>)
+                        })}
+                    </ul>
+                </div>
+                <div className={styles.projectContent}>
+                    <p>
+                        {project.shortDescription}
+                   </p>
+                    <button className={styles.projectMore} onClick={() => {/*openProjectDescription(project.title, project.technologies, project.description)*/setTargetTitle(project.title); setTargetTechnologies(project.technologies); setTargetDescription(project.description); setTargetLink(project.link); setModalShow(true)}}>
+                        More
+                   </button>
+                </div>
+            </div>
+        )}
+    )
 
     return (
-        <div>   
-        <div className={styles.projects}>
-            <div className={styles.title}>
-                <p>Projects ☄️</p>
+        <div>
+            <div className={styles.projects}>
+                <div className={styles.title}>
+                    <p>Projects ☄️</p>
+                </div>
+                {projects}
             </div>
-            <div className={styles.projectItem}>
-            <div className={styles.projectTitle}>
-                    <h2>Title</h2>
-                </div>
-                <div className={styles.projectStack}>
-                    <ul className={styles.technologies__list}>
-                        <li>
-                            React
-                        </li>
-                        <li>
-                            SASS
-                        </li>
-                        <li>
-                            Express
-                        </li>
-                        <li>
-                            MongoDB
-                        </li>
-                    </ul>
-                </div>
-                <div className={styles.projectContent}>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Vivamus tempor quam orci, at accumsan nunc gravida id.
-                        Ut ut sagittis arcu. Sed nec diam non leo lacinia vulputate.
-                        Maecenas ultrices venenatis magna,
-                        in semper metus faucibus eu.
-                        Sed id urna vel lacus pellentesque tempus.
-                        Duis a volutpat mi. Quisque porta tristique orci,
-                        ac facilisis diam efficitur non.
-                        Sed malesuada mauris eu mattis sodales.
-                        Cras eros enim, condimentum non nulla nec,
-                        ullamcorper dictum ante.
-                   </p>
-                    <button className={styles.projectMore} onClick={() => setModalShow(true)}>
-                        More
-                   </button>
-                </div>
-            </div>
-            <div className={styles.projectItem}>
-                <div className={styles.projectTitle}>
-                    <h2>Title</h2>
-                </div>
-                <div className={styles.projectStack}>
-                    <ul className={styles.technologies__list}>
-                        <li>
-                            React
-                        </li>
-                        <li>
-                            SASS
-                        </li>
-                        <li>
-                            Express
-                        </li>
-                        <li>
-                            MongoDB
-                        </li>
-                    </ul>
-                </div>
-                <div className={styles.projectContent}>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Vivamus tempor quam orci, at accumsan nunc gravida id.
-                        Ut ut sagittis arcu. Sed nec diam non leo lacinia vulputate.
-                        Maecenas ultrices venenatis magna,
-                        in semper metus faucibus eu.
-                        Sed id urna vel lacus pellentesque tempus.
-                        Duis a volutpat mi. Quisque porta tristique orci,
-                        ac facilisis diam efficitur non.
-                        Sed malesuada mauris eu mattis sodales.
-                        Cras eros enim, condimentum non nulla nec,
-                        ullamcorper dictum ante.
-                   </p>
-                    <button className={styles.projectMore}>
-                        More
-                   </button>
-                </div>
-            </div>
-            <div className={styles.projectItem}>
-            <div className={styles.projectTitle}>
-                    <h2>Title</h2>
-                </div>
-                <div className={styles.projectStack}>
-                    <ul className={styles.technologies__list}>
-                        <li>
-                            React
-                        </li>
-                        <li>
-                            SASS
-                        </li>
-                        <li>
-                            Express
-                        </li>
-                        <li>
-                            MongoDB
-                        </li>
-                    </ul>
-                </div>
-                <div className={styles.projectContent}>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Vivamus tempor quam orci, at accumsan nunc gravida id.
-                        Ut ut sagittis arcu. Sed nec diam non leo lacinia vulputate.
-                        Maecenas ultrices venenatis magna,
-                        in semper metus faucibus eu.
-                        Sed id urna vel lacus pellentesque tempus.
-                        Duis a volutpat mi. Quisque porta tristique orci,
-                        ac facilisis diam efficitur non.
-                        Sed malesuada mauris eu mattis sodales.
-                        Cras eros enim, condimentum non nulla nec,
-                        ullamcorper dictum ante.
-                   </p>
-                    <button className={styles.projectMore}>
-                        More
-                   </button>
-                </div>
-            </div>
-        </div>
-        <ProjectDetails
-          show={modalShow}
-          onHide={() => setModalShow(false)}
-        />
+            <ProjectDetails
+            show={modalShow}
+            onHide={() => setModalShow(false)}
+            title = {targetTitle}
+            technologies = {targetTechnologies}
+            description = {targetDescription}
+            link = {targetLink}
+            />
         </div>
     )
 }

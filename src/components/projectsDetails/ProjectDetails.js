@@ -3,8 +3,11 @@ import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import styles from './projectDetails.module.scss'
 import data from "../../data.json"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/fontawesome-free-brands'
 
 export default function ProjectDetails(props) {
+  console.log(props.link)
     return (
         <Modal
         {...props}
@@ -15,33 +18,21 @@ export default function ProjectDetails(props) {
       >
         <Modal.Header className={styles.modal__header}>
           <Modal.Title id="contained-modal-title-vcenter" className={styles.modal__title}>
-            {data["projects"][0]["name"]}
+            {props.title}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div>
             <ul className={styles.technologies__list}>
-              <li>
-                {data["projects"][0]["technologies"][0]}
-              </li>
-              <li>
-                {data["projects"][0]["technologies"][1]}
-              </li>
-              <li>
-                {data["projects"][0]["technologies"][2]}
-              </li>
-              <li>
-                {data["projects"][0]["technologies"][3]}
-              </li>
+              {props.show ? props.technologies.map((technology) => {
+                return(<li>{technology}</li>)
+              }) : null}
             </ul>
           </div>
           <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-            consectetur ac, vestibulum at eros.
-            
+              {props.description}
           </p>
-          <Button onClick={props.onHide} className={styles.modal__button}>Take me to the site</Button>
+          <Button onClick={() => {window.location.href = props.link; return null}} className={styles.modal__button}>Take me to the site</Button>
         </Modal.Body>
         <Modal.Footer className={styles.modal__footer}>
           <Button onClick={props.onHide} className={styles.modal__button}>Close</Button>

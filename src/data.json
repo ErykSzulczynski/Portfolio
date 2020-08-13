@@ -8,15 +8,89 @@
     },
     "projects":[
         {
-            "name": "Uniwersytet Trzeciego Wieku",
+            "title": "Uniwersytet Trzeciego Wieku",
             "technologies": [
                 "HTML",
                 "CSS",
                 "PHP",
                 "Wordpress"
             ],
+            "link": "https://www.google.com/",
+            "description": "Text",
+            "shortDescription": "Short"
+        },
+        {
+            "title": "LearnIT",
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JS",
+                "React.js"
+            ],
             "link": "https://utwnt.pl/",
-            "description": ""
+            "description": "Text",
+            "shortDescription": "Short"
+        },
+        {
+            "title": "Portfolio",
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JS",
+                "Gatsby.js"
+            ],
+            "link": "https://www.utwnt.pl/",
+            "description": "Text",
+            "shortDescription": "Short"
+        },
+        {
+            "title": "Library managament app",
+            "technologies": [
+                "HTML",
+                "CSS",
+                "PHP"
+            ],
+            "link": "https://www.utwnt.pl/",
+            "description": "Text",
+            "shortDescription": "Short"
+        },
+        {
+            "title": "Blog app",
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JS",
+                "Node.js",
+                "Express"
+            ],
+            "link": "https://www.utwnt.pl/",
+            "description": "Text",
+            "shortDescription": "Short"
+        },
+        {
+            "title": "House organizer",
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JS",
+                "Express",
+                "React Native"
+            ],
+            "link": "https://www.utwnt.pl/",
+            "description": "Text",
+            "shortDescription": "Short"
+        },
+        {
+            "title": "Day planner",
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JS",
+                "React.js"
+            ],
+            "link": "https://www.utwnt.pl/",
+            "description": "Text",
+            "shortDescription": "Short"
         }
     ]
 }
