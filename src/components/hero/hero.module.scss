@@ -19,7 +19,7 @@
 
     &__text{
         position: relative;
-        height: 100%;
+        min-height: 10vh;
         font-size: 40px;
         text-align: right;
         margin-top: 40vh;
@@ -43,7 +43,14 @@
 
         &:hover{
             color: $base-color;
+            cursor: pointer;
         }
+    }
+
+    &__links{
+        color: white;
+        text-align: right;
+        margin-right: 5vw;
     }
 }
 
