@@ -32,9 +32,10 @@ export default function ProjectDetails(props) {
           <p>
               {props.description}
           </p>
-          <Button onClick={() => {window.location.href = props.link; return null}} className={styles.modal__button}>Take me to the site</Button>
+          
         </Modal.Body>
         <Modal.Footer className={styles.modal__footer}>
+          <Button onClick={() => {window.location.href = props.link; return null}} className={styles.modal__button}>Take me to the site</Button>
           <Button onClick={props.onHide} className={styles.modal__button}>Close</Button>
         </Modal.Footer>
       </Modal>
