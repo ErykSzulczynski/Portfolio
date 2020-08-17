@@ -16,8 +16,13 @@
 .skills{
     
     width: 80vw;
+    min-height: 80vh;
     margin: 0 auto;
     color: white;
+
+    @include xl{
+        min-height: 0;
+    }
 
     &__title{
         font-size: 25px;
@@ -49,15 +54,27 @@
         }
     }
 
+    &__gridItem{
+        margin-top: 5vh;
+
+        @include xl{
+            margin-top: 0;
+        }
+    }
+
     &__gridItem:nth-child(2){
         border-top: 1px solid grey;
         border-bottom: 1px solid grey;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
 
         @include xl{
             border-left: 2px solid grey;
             border-right: 2px solid grey;
             border-top: none;
             border-bottom: none;
+            padding-top: 0;
+            padding-bottom: 0;
         }
        
     }

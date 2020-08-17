@@ -25,7 +25,7 @@ export default function Projects() {
                     </ul>
                 </div>
                 <div className={styles.projectContent}>
-                    <p>
+                    <p className={styles.shortDescription}>
                         {project.shortDescription}
                    </p>
                     <button className={styles.projectMore} onClick={() => {/*openProjectDescription(project.title, project.technologies, project.description)*/setTargetTitle(project.title); setTargetTechnologies(project.technologies); setTargetDescription(project.description); setTargetLink(project.link); setModalShow(true)}}>

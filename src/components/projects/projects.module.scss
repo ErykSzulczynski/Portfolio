@@ -38,7 +38,7 @@
 }
 
 .projects{
-    width: 70vw;
+    width: 90vw;
     margin: 0 auto;
     display: grid;
     grid-template-columns: auto;
@@ -48,16 +48,17 @@
     color: white;
 
     @include xl{
+        width: 80vw;
         grid-template-columns: auto auto auto;
     }
 }
 
 .projectItem{
+    position: relative;
     width: 100%;
     min-height: 40vh;
     border: 2px solid $base-color;
-    margin: 0 auto;
-    margin-top: 10vh;
+    margin: 10vh auto;
 
     @include xl{
         width: 20vw;
@@ -79,23 +80,31 @@
     width: 100%;
     text-align: justify;
     padding: 0 20px;
+
+    .shortDescription{
+        padding-bottom: calc(6.5vh + 20px);
+    }
 }
 
 .projectMore{
+    position: absolute;
+    left: 15vw;
+    bottom: 10px;
     width: 60vw;
-        padding: 1.5vh 0;
-        border-radius: 10px;
-        border: none;
-        outline: none;
-        color: white;
-        background: $base-color;
-        display: block;
-        margin: 0 auto; 
-        margin-bottom: 1rem;
-        font-size: 16px;
+    padding: 1.5vh 0;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: white;
+    background: $base-color;
+    display: block;
+    margin: 0 auto; 
+    margin-bottom: 1rem;
+    font-size: 16px;
     
     @include xl{
-        width: 10vw;
+        width: 50%;
+        left: 25%;
     }
 }
 
