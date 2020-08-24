@@ -8,8 +8,15 @@
     left: 30px;
 }
 
-.links__listItem{
+.links__listItemClosed{
     position: relative;
+    font-size: 30px;
+    color: white;
+    z-index: 110;
+}
+
+.links__listItemOpened{
+    position: fixed;
     font-size: 30px;
     color: white;
     z-index: 110;
@@ -26,7 +33,7 @@
 }
 
 .overlayOpened{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -46,5 +53,13 @@
         padding-top: 3rem;
         font-size: 25px;
         color: $dimmed-color;
+
+        a{
+            color: $dimmed-color;
+
+            &:hover{
+                color: $base-color;
+            }
+        }
     }
 }

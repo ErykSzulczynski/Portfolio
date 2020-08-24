@@ -25,7 +25,9 @@ export default function Hero() {
                     <span className={styles.hero__icon} onClick={() => {window.location.assign("https://github.com/ErykSzulczynski")}}><FontAwesomeIcon icon={faGithubSquare} /></span>
                     <span className={styles.hero__icon} onClick={() => {window.location.assign("https://www.linkedin.com/in/eryk-szu%C5%82czy%C5%84ski-225386192/")}}><FontAwesomeIcon icon={faLinkedin} /></span>
                 </div>
-                <div className={styles.box}></div>
+                <div className={styles.box1}></div>
+                <div className={styles.box2}></div>
+                <div className={styles.box3}></div>
             </div>
     )
 }

@@ -10,8 +10,6 @@ import Footer from '../components/footer/Footer'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Helmet } from "react-helmet"
 
-
-
 export default function index() {
 
     function isMobile(){

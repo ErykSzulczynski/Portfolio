@@ -27,7 +27,7 @@ class NavbarMobile extends React.Component {
             <div className={styles.navbar}>
               <ul className={styles.links__list}>
                 <li
-                  className={styles.links__listItem}
+                  className={this.state.isOpen ? styles.links__listItemOpened : styles.links__listItemClosed}
                   onClick={this.toggleMenu}
                 >
                   {this.state.isOpen ? (
@@ -49,10 +49,10 @@ class NavbarMobile extends React.Component {
                             <div className= {styles.overlayOpened}>
                                 <div style={props}>
                                     <ul className={styles.overlay__menu}>
-                                        <li className={styles.overlay__menuItem}>About</li>
-                                        <li className={styles.overlay__menuItem}>Skills</li>
-                                        <li className={styles.overlay__menuItem}>Portfolio</li>
-                                        <li className={styles.overlay__menuItem}>Contact</li>
+                                        <li className={styles.overlay__menuItem}><a href="#about">About</a></li>
+                                        <li className={styles.overlay__menuItem}><a href="#skills">Skills</a></li>
+                                        <li className={styles.overlay__menuItem}><a href="#projects">Projects</a></li>
+                                        <li className={styles.overlay__menuItem}><a href="#contact">Contact</a></li>
                                     </ul>
                                 </div>
                             </div>
